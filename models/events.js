@@ -9,6 +9,8 @@ const eventsSchema = new Schema({
     
 });
 
+//CK Comment - to be removed 10/11
+
 const Events = mongoose.model("Events", eventsSchema);
 
 module.exports = Events;
