@@ -1,24 +1,28 @@
 {
-  "name": "givetime",
+  "name": "mern",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && yarn install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gscoggin/givetime.git"
-  },
-  "author": "Christopher Kelsey",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gscoggin/givetime/issues"
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
   },
-  "homepage": "https://github.com/gscoggin/givetime#readme",
   "dependencies": {
-    "express": "^4.16.3",
-    "mongoose": "^5.3.2"
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^5.0.17",
+    "if-env": "^1.0.4"
   }
 }
