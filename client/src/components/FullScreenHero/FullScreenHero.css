@@ -13,8 +13,6 @@
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: url("./main.jpg") center center no-repeat;
-  background-size: cover;
 }
 
 .hero-full-screen .middle-content-section {
@@ -60,5 +58,18 @@
 .hero-full-screen .top-bar .menu a {
   color: #fefefe;
   font-weight: bold;
+}
+
+.hero-full-screen::after {
+  content: "";
+  background: url("./main.jpg") center center no-repeat;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+  background-size: cover;
 }
 
