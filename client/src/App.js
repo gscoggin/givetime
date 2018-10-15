@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Foundation from 'react-foundation';
 
 import FullScreenHero from './components/FullScreenHero';
 
