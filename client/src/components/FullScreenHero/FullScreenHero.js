@@ -1,7 +1,8 @@
 
 
 import React from "react";
-
+import Foundation from 'react-foundation';
+import Button from './../Button'
 import "./FullScreenHero.css"
 
 // This Col component lets us size bootstrap columns with less syntax
@@ -27,8 +28,8 @@ const FullScreenHero = ({ size, children }) => (
 
   <div className="middle-content-section">
     <h1>Super Compelling Headline</h1>
-    <button className="button large">Button</button>
-    <button className="button large">Button</button>
+    <Button />
+    {/* <button className="btn btn-lg">Button</button> */}
   </div>
 
   <div className="bottom-content-section" data-magellan data-threshold="0">
