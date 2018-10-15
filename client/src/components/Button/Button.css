@@ -6,7 +6,7 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  border: 1px solid #1779ba;
+  border: 1px solid #2f5753;
   border-radius: 0.625rem;
   overflow: hidden;
   margin-bottom: 1rem;
@@ -14,7 +14,7 @@
 
 .mobile-app-toggle .button {
   background: transparent;
-  color: #1779ba;
+  color: #2f5753;
   margin-bottom: 0;
   -webkit-flex: 1 0 0;
       -ms-flex: 1 0 0px;
@@ -22,11 +22,11 @@
 }
 
 .mobile-app-toggle .button:nth-child(n+1) {
-  border-left: 1px solid #1779ba;
+  border-left: 1px solid #2f5753;
 }
 
 .mobile-app-toggle .button.is-active {
-  background: #1779ba;
+  background:#2f5753;
   color: #fefefe;
 }
 
