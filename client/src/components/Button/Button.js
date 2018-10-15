@@ -7,8 +7,8 @@ const Button = ({ type = "default", className, children, onClick }) => (
  
  
 <div class="mobile-app-toggle" data-mobile-app-toggle>
-  <button class="button is-active">People</button>
-  <button class="button">Tags</button>
+  <button class="button is-active">Volunteer</button>
+  <button class="button">Charity</button>
 </div>
   
   
