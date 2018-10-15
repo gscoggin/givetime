@@ -1,10 +1,22 @@
+
+
+import React from "react";
+
+import "./FullScreenHero.css"
+
+// This Col component lets us size bootstrap columns with less syntax
+// e.g. <Col size="md-12"> instead of <div className="col-md-12">
+const FullScreenHero = ({ size, children }) => (
+  
+
+
 <div className="hero-full-screen">
 
   <div className="top-content-section">
     <div className="top-bar">
       <div className="top-bar-left">
         <ul className="menu">
-          <li className="menu-text"><img src="http://placehold.it/75x30" alt="logo"></li>
+          <li className="menu-text"><img src="http://placehold.it/75x30" alt="logo" /></li>
           <li><a href="#">One</a></li>
           <li><a href="#">Two</a></li>
           <li><a href="#">Three</a></li>
@@ -25,8 +37,8 @@
 
 </div>
 
-<div id="main-content-section" data-magellan-target="main-content-section">
-  <!-- your content goes here -->
-</div>
+);
 
-</div>
+
+
+export default FullScreenHero;
