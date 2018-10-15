@@ -15,19 +15,16 @@ const FullScreenHero = ({ size, children }) => (
 
   <div className="top-content-section">
     <div className="top-bar">
-      <div className="top-bar-left">
+      <div className="top-bar-right">
         <ul className="menu">
-          <li className="menu-text"><img src="http://placehold.it/75x30" alt="logo" /></li>
-          <li><a href="#">One</a></li>
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
+          <li><a href="#">Sign in</a></li>
         </ul>
       </div>
     </div>
   </div>
 
   <div className="middle-content-section">
-    <h1>Super Compelling Headline</h1>
+    <h1>I am a ...</h1>
     <Button />
     {/* <button className="btn btn-lg">Button</button> */}
   </div>
