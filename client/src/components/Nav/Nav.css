@@ -1,0 +1,28 @@
+h3 {
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.sideNav {
+    height:100%;
+    width:200px;
+    background-color:#fff;
+    position:fixed!important;
+    z-index:1;
+    overflow:auto;
+    background: #0e4e67;
+    text-align: center;
+}
+
+.sideNavItem{
+    color: white;
+    width:100%;
+    display:block;
+    padding:8px 16px;
+}
+
+img {
+    margin-top: 30%;
+    width: 30%;
+    border-radius: 1000px;
+}

@@ -1,0 +1,11 @@
+.radius {
+    border-radius: 10px; 
+}
+
+.round {
+    border-radius: 1000px; 
+}
+
+.eventBtn {
+    background-color: #0e4e67;
+}
