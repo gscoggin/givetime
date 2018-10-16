@@ -6,3 +6,6 @@ export const Container = ({ fluid, children }) => (
     {children}
   </div>
 );
+
+
+export default Container;
