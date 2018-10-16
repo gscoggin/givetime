@@ -1,0 +1,19 @@
+.next-button {
+
+  background-color: rgba(51, 140, 235, 0.8);
+  border-radius: 3px;
+  border: 1px solid #888;
+
+  width: 30%;
+  height: 40%;
+  padding: 15px;
+  display: block;
+  margin: auto;
+
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 3px lightgray;
+
+}
