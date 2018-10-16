@@ -1,4 +1,5 @@
 import React from "react";
+import "./Feed.css";
 import "../Button/Button-2.css";
 
 const FeedListItem = props => (
