@@ -9,10 +9,11 @@ class App extends Component {
     return (
       <div className="App">
 
-      {/*<EventFeedPage />*/}
+      
       
        <FullScreenHero />
-       {/* <SignInHero /> */}
+       {/* <EventFeedPage /> */}
+       {/* <SignInHero />  */}
        
       </div>
     );
