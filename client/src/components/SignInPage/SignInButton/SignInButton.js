@@ -7,7 +7,7 @@ import "./SignInButton.css"
 // e.g. <Col size="md-12"> instead of <div className="col-md-12">
 const SignInButton = ({ size, children }) => (
   
-  <button className="next-button center">Next</button>
+  <button className="next-button button center">Next</button>
 
 
 );

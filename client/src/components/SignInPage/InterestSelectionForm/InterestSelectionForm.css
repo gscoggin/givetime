@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  line-height: 30px;
+ 
+}
+
+/* Create two equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 50%;
+  margin-left: 60px;
+  margin-top: 70px;
+  margin-bottom: 90px;
+  line-height: 60px;
+  
+}
+.column2 {
+  float: left;
+  
+  
+  margin-top: 70px;
+  margin-bottom: 90px;
+  line-height: 60px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
