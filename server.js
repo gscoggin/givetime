@@ -9,6 +9,7 @@ const session = require('express-session');
 const cors = require('cors');
 const errorHandler = require('errorhandler');
 
+
 //Configure mongoose's promise to global promise
 mongoose.promise = global.Promise;
 
@@ -37,36 +38,41 @@ if(!isProduction) {
   app.use(errorHandler());
 }
 
-// Connect to the Mongo DB
+// Configure mongoose to connect to the Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/give_time"
 );
 mongoose.set('debug', true);
 
+//model routes
+require('./models/Users');
+require('./config/passport');
+app.use(require('./routes'));
+
 //Error handlers & middlewares
-if(!isProduction) {
-  app.use((err, req, res) => {
-    res.status(err.status || 500);
+// if(!isProduction) {
+//   app.use((err, req, res) => {
+//     res.status(err.status || 500);
 
-    res.json({
-      errors: {
-        message: err.message,
-        error: err,
-      },
-    });
-  });
-}
+//     res.json({
+//       errors: {
+//         message: err.message,
+//         error: err,
+//       },
+//     });
+//   });
+// }
 
-app.use((err, req, res) => {
-  res.status(err.status || 500);
+// app.use((err, req, res) => {
+//   res.status(err.status || 500);
 
-  res.json({
-    errors: {
-      message: err.message,
-      error: {},
-    },
-  });
-});
+//   res.json({
+//     errors: {
+//       message: err.message,
+//       error: {},
+//     },
+//   });
+// });
 
 
 app.listen(PORT, () => {
