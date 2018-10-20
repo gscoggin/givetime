@@ -30,3 +30,7 @@
   color: #fefefe;
 }
 
+.button:hover {
+  background:#2f5753;
+  color: #fefefe;
+}
