@@ -1,13 +1,13 @@
 
 import React from "react";
 import Foundation from 'react-foundation';
-import FormBack from "./../FormBack";
-import SignInButton from "./../SignInButton";
+import SignInFormBack from "./SignInFormBack";
+import SignInButton from "./SignInButton";
 import "./SignInForm.css"
 
 const SignInForm = ({ size, children }) => (
 
-  <FormBack>
+  <SignInFormBack>
   <form action="form-control">
   
   <div className="inputs">
@@ -23,38 +23,13 @@ const SignInForm = ({ size, children }) => (
   <input
     //  onChange={props.handleInputChange}
     //  value={"firstname"}
-     name="firstname"
+     name="password"
      type="text"
      className="form-control"
-     placeholder="First Name" 
+     placeholder="Password" 
      id="firstname" />
  
-  <input
-    //  onChange={props.handleInputChange}
-    //  value={props.value}
-     name="lastname"
-     type="text"
-     className="form-control"
-     placeholder="Last Name" 
-     id="lastname" />
- 
-  <input
-    //  onChange={props.handleInputChange}
-    //  value={props.value}
-     name="email"
-     type="text"
-     className="form-control"
-     placeholder="Email" 
-     id="email" />
- 
-  <input
-    //  onChange={props.handleInputChange}
-    //  value={props.value}
-     name="phonenumber"
-     type="text"
-     className="form-control"
-     placeholder="Phone Number" 
-     id="phonenumber" />
+  
 
   </div>
   
@@ -62,7 +37,7 @@ const SignInForm = ({ size, children }) => (
   
 </form>
   
-</FormBack>
+</SignInFormBack>
 
 
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import Foundation from 'react-foundation';
+import SignUpHero from './components/SignInPage/SignUpHero/SignUpHero';
 import SignInHero from './components/SignInPage/SignInHero/SignInHero';
 import FullScreenHero from './components/FullScreenHero';
 import EventFeedPage from './components/Feed';
@@ -22,6 +23,10 @@ class GiveTime extends Component {
       <SignInHero>
         <Link to="/signin"></Link>
       </SignInHero>
+
+      <SignUpHero>
+        <Link to="/signup"></Link>
+      </SignUpHero>
 
       <InterestSelectionHero>
           <Link to="/interests"></Link>

@@ -1,15 +1,46 @@
 .form-control {
-  margin: 40px auto;
+  margin: 30px auto;
   background-color:#fff;
   width: 80%;
   height: 80%;
   z-index: 2;
 
-  font-family: 'Quicksand', sans-serif;
-  font-size: 20px;
-  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  
   text-shadow: 0 0 3px lightgray;
 }
 
+.signin-button {
 
+  background-color:  #0e4e67;
+  border-radius: 3px;
+  border: 1px solid #888;
+
+  width: 30%;
+  height: 40%;
+  padding: 15px;
+  display: block;
+  
+  margin: auto;
+
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 3px lightgray;
+
+}
+
+.sign-inform-back {
+  background: rgba(238, 233, 233, 0.8);
+  border-radius: 25px;
+  border: 1px solid #888;
+  
+  width: 400px;
+  height: 300px;
+  
+  margin: auto;
+
+}
 
