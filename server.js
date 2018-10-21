@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const db = require("./models");
 const mongoose = require("mongoose");
-//const routes = require("./routes");
+const routes = require("./routes");
 // required for authentication (trying it out at least)
 const path = require('path');
 const session = require('express-session');
@@ -40,14 +40,12 @@ if(!isProduction) {
 
 // Configure mongoose to connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/give_time"
-);
+  process.env.MONGODB_URI || "mongodb://localhost/give_time", { useNewUrlParser: true });
 mongoose.set('debug', true);
 
 //model routes
-require('./models/Users');
 require('./config/passport');
-app.use(require('./routes'));
+app.use(routes);
 
 //Error handlers & middlewares
 // if(!isProduction) {
