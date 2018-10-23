@@ -14,7 +14,6 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-
 // Connect to the Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/give_time"
@@ -23,4 +22,6 @@ mongoose.connect(
 app.listen(PORT, () => {
 	console.log(`Listening on ${PORT}`);
 });
+
+
 
