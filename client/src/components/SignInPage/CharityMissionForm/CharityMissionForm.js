@@ -21,9 +21,9 @@ const CharityMissionForm = ({ size, children }) => (
   <div className="browseInputs">
   
   <div className="innerBrowse">
-  <input class="input-group-field" type="browse" />
-      <button class="browseBubutton">Browse</button>
-      <button class="uploadButton">Upload</button>
+  <input className="input-group-field" type="browse" />
+      <button className="browseButton">Browse</button>
+      <button className="uploadButton">Upload</button>
 
 
   </div>
