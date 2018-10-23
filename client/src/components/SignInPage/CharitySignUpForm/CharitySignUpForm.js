@@ -37,6 +37,7 @@ const CharitySignUpForm = ({ size, children }) => (
      className="form-control"
      placeholder="Charity Category" 
       />
+      
  
   <input
     //  onChange={props.handleInputChange}

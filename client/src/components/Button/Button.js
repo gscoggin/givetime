@@ -9,7 +9,7 @@ const Button = ({ type = "default", className, children, onClick }) => (
  
 <div class="mobile-app-toggle" data-mobile-app-toggle>
   <Link to ="/signup" class="button">Volunteer</Link>
-  <Link to ="/signup" class="button">Charity</Link>
+  <Link to ="/charitysignup" class="button">Charity</Link>
 </div>
   
   

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Foundation from 'react-foundation';
 import SignUpHero from './components/SignInPage/SignUpHero/SignUpHero';
 import CharitySignUpHero from './components/SignInPage/CharitySignUpHero/CharitySignUpHero';
+import CharityMissionHero from './components/SignInPage/CharityMissionHero/CharityMissionHero';
 
 import SignInHero from './components/SignInPage/SignInHero/SignInHero';
 import FullScreenHero from './components/FullScreenHero';
@@ -19,6 +20,7 @@ const App = () => (
       <Route exact path="/signin" component={SignInHero} />
       <Route exact path="/signup" component={SignUpHero} />
       <Route exact path="/charitysignup" component={CharitySignUpHero} />
+      <Route exact path="/charitymissionform" component={CharityMissionHero} />
       <Route  exact path="/eventfeed" component={EventFeedPage} />
       <Route  exact path="/interests" component={InterestSelectionHero} />
 

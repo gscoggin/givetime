@@ -1,0 +1,60 @@
+.charitymission-form-back {
+  background: rgba(238, 233, 233, 0.8);
+  border-radius: 25px;
+  border: 1px solid #888;
+  
+  width: 60%;
+ 
+  
+  margin: auto;
+
+}
+
+h1 {
+  text-align: center;
+  color: #888;
+
+}
+h3 {
+  text-align: center;
+}
+label {
+  color: #888;
+}
+.submit-button {
+
+  background-color: rgba(51, 140, 235, 0.8);
+  border-radius: 3px;
+  border: 1px solid #888;
+
+  width: 10%;
+  height: 40%;
+  padding: 15px;
+  display: block;
+  
+  margin: 20px auto;
+
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 3px lightgray;
+
+}
+.inputs {
+  width: 80%;
+  margin: auto;
+
+
+}
+
+.browseInputs {
+  width: 80%;
+  height: 100px;
+  margin: auto;
+  border: 1px solid #888;
+  background-color: white;
+}
+input {
+  margin: 0 auto;
+}

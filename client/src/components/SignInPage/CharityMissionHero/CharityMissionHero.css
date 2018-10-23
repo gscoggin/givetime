@@ -1,0 +1,39 @@
+
+.charitysign-in-hero-full-screen {
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+
+
+.charitysign-in-hero-full-screen::after {
+  content: "";
+  background: url("./remi-walle-86579-unsplash.jpg") center center no-repeat;
+  opacity: .7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+  background-size: cover;
+}
+
+p {
+    text-align: center;
+}
+.editList {
+    margin: 30px;
+    
+}

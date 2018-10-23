@@ -15,7 +15,9 @@ input::placeholder {
   color: #777;
 }
 
-
+p {
+  font-size: 20px;
+}
 .charity-form-back {
   background: rgba(238, 233, 233, 0.8);
   border-radius: 25px;
@@ -28,6 +30,15 @@ input::placeholder {
 
 }
 input[type="radio"] {
-  margin-left: 100px;
+  margin-left: 120px;
+  margin-right: 10px;
+  size: 50px;
+  
 }
+label {
+  font-size: 20px;
+  margin-left: 0;
+}
+
+
 

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Foundation from 'react-foundation';
 import SignUpHero from './components/SignInPage/SignUpHero/SignUpHero';
 import CharitySignUpHero from './components/SignInPage/CharitySignUpHero/CharitySignUpHero';
+import CharityMissionHero from './components/SignInPage/CharityMissionHero/CharityMissionHero';
 import SignInHero from './components/SignInPage/SignInHero/SignInHero';
 import FullScreenHero from './components/FullScreenHero';
 import EventFeedPage from './components/Feed';
@@ -33,6 +34,11 @@ class GiveTime extends Component {
       <CharitySignUpHero>
         <Link to="/charitysignup"></Link>
       </CharitySignUpHero>
+
+      
+      <CharityMissionHero>
+        <Link to="/charitymissionform"></Link>
+      </CharityMissionHero>
 
       <InterestSelectionHero>
           <Link to="/interests"></Link>
