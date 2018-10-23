@@ -1,17 +1,11 @@
-//index.js copy
-
 const path = require("path");
 const router = require("express").Router();
-// const apiRoutes = require("./api");
 const express = require('express');
+const users = require('./users');
+const events = require('./events');
 
 // API Routes
-// router.use("/api", apiRoutes);
-router.use('/users', require('./users'));
-
-// If no API routes are hit, send the React app
-router.use(function(req, res) {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
+router.use('/users', users);
+router.use('/events', events);
 
 module.exports = router;
