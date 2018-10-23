@@ -9,6 +9,8 @@ const axios = require("axios")
 //app_key
 // comment to submit
 
+
+
 axios({
   method:'get',
   url:'https://api.data.charitynavigator.org/v2/Organizations?app_id=55723541&app_key=9a29e15660eeb4f5080e74807273e894&pageSize=20&rated=true&state=CA&sort=NAME',
@@ -23,4 +25,4 @@ axios({
     }
   });
 
-//module.exports = router;
+module.exports = axios;
