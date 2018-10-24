@@ -4,7 +4,7 @@ import React from "react";
 import Foundation from 'react-foundation';
 import InterestSelectionForm from "./../InterestSelectionForm";
 
-import "./SignInHero.css"
+import "./SignUpHero.css"
 
 
 // This Col component lets us size bootstrap columns with less syntax
@@ -13,7 +13,7 @@ const InterestSelectionHero = ({ size, children }) => (
   
 
 
-<div className="sign-in-hero-full-screen">
+<div className="sign-up-hero-full-screen">
 
 
    <InterestSelectionForm />

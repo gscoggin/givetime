@@ -1,5 +1,5 @@
 
-.sign-in-hero-full-screen {
+.sign-up-hero-full-screen {
   height: 100vh;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17,10 +17,10 @@
 
 
 
-.sign-in-hero-full-screen::after {
+.sign-up-hero-full-screen::after {
   content: "";
-  background: url("./main.jpg") center center no-repeat;
-  opacity: .7;
+  background: url("./volunteer2.jpeg") center center no-repeat;
+  
   top: 0;
   left: 0;
   bottom: 0;

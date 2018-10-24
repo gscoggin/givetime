@@ -1,5 +1,6 @@
 import React from "react";
 import "./Button.css";
+import { Link } from 'react-router-dom';
 
 // Destructuring the type, className, children and onClick props, applying them to the button element
 const Button = ({ type = "default", className, children, onClick }) => (
@@ -7,8 +8,8 @@ const Button = ({ type = "default", className, children, onClick }) => (
  
  
 <div class="mobile-app-toggle" data-mobile-app-toggle>
-  <button class="button is-active">Volunteer</button>
-  <button class="button">Charity</button>
+  <Link to ="/signup" class="button">Volunteer</Link>
+  <Link to ="/signup" class="button">Charity</Link>
 </div>
   
   

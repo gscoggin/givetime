@@ -1,5 +1,5 @@
 
-.sign-in-hero-full-screen {
+.charitysign-in-hero-full-screen {
   height: 100vh;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17,9 +17,9 @@
 
 
 
-.sign-in-hero-full-screen::after {
+.charitysign-in-hero-full-screen::after {
   content: "";
-  background: url("./main.jpg") center center no-repeat;
+  background: url("./remi-walle-86579-unsplash.jpg") center center no-repeat;
   opacity: .7;
   top: 0;
   left: 0;
@@ -30,3 +30,10 @@
   background-size: cover;
 }
 
+p {
+    text-align: center;
+}
+.editList {
+    margin: 30px;
+    
+}
