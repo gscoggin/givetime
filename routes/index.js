@@ -1,7 +1,7 @@
 const express = require('express');
 const api = require('./api');
 const charities = require('./charities');
-const path = require('./path');
+const path = require('path');
 const router = express.Router();
 
 router.use('/api', api);
