@@ -19,6 +19,15 @@ const SignUpForm = ({ size, children }) => (
      className="form-control"
      placeholder="Username" 
      id="username" />
+
+  <input
+    //  onChange={props.handleInputChange}
+    //  value="username"
+     name="password"
+     type="text"
+     className="form-control"
+     placeholder="Password" 
+     id="password" />
   
   <input
     //  onChange={props.handleInputChange}
