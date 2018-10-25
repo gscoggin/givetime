@@ -1,10 +1,20 @@
 const mongoose = require('mongoose');
 const passport = require('passport');
 const router = require('express').Router();
+const volunteerController = require('../controllers/volunteerController');
 const auth = require('./auth');
 const Users = mongoose.model('Users');
 
 //POST new user route (optional, everyone has access)
+
+router
+  .route("/register")
+  .post(volunteerController.create);
+
+router
+  .route("/users")
+  .get(volunteerController.findAll);
+
 router.post('/', auth.optional, (req, res, next) => {
   const { body: { user } } = req;
 

@@ -4,7 +4,7 @@ module.exports = {
     findAll: function(req, res) {
         db.Volunteer
         .find(req.query)
-        .sort({ name: -1 })
+        .sort({ lastName: -1 })
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(442).json(err));
     },
