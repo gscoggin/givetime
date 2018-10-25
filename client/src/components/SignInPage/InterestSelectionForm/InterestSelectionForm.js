@@ -1,6 +1,5 @@
 
 import React from "react";
-import Foundation from 'react-foundation';
 import FormBack from "./../FormBack";
 import SignInButton from "./../SignInButton";
 import "./InterestSelectionForm.css"

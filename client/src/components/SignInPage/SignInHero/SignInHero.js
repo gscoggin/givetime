@@ -1,6 +1,5 @@
 
 import React from "react";
-import Foundation from 'react-foundation';
 import SignInForm from "./../SignInForm";
 
 import "./SignInHero.css"

@@ -1,5 +1,4 @@
 import React from "react";
-import Foundation from 'react-foundation';
 
 import "./CharityMissionForm.css"
 

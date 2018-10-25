@@ -1,6 +1,5 @@
 
 import React from "react";
-import Foundation from 'react-foundation';
 import CharityFormBack from "./CharityFormBack";
 import SignInButton from "./../SignInButton";
 import "./CharitySignUpForm.css"

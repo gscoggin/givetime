@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Foundation from 'react-foundation';
 import SignUpHero from './components/SignInPage/SignUpHero/SignUpHero';
 import CharitySignUpHero from './components/SignInPage/CharitySignUpHero/CharitySignUpHero';
 import CharityMissionHero from './components/SignInPage/CharityMissionHero/CharityMissionHero';

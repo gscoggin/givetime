@@ -1,7 +1,5 @@
 
 import React from "react";
-import Foundation from 'react-foundation';
-
 import "./SignInForm.css"
 
 // This Col component lets us size bootstrap columns with less syntax
