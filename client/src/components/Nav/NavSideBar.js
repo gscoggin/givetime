@@ -8,6 +8,7 @@ const NavSideBar = ({ size, children}) => (
     <a className= "sideNavItem" href = "#">Profile</a>
     <a className= "sideNavItem" href = "#">Events</a>
     <a className= "sideNavItem" href = "#">Sign Out</a>
+    <a className= "sideNavItem" href = "#">My Events</a>
     </div>
 );
 

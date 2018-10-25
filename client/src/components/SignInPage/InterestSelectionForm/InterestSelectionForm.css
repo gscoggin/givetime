@@ -14,11 +14,11 @@
 /* Create two equal columns that floats next to each other */
 .column1 {
   float: left;
-  width: 50%;
+  width: 30%;
   margin-left: 60px;
   margin-top: 50px;
   margin-bottom: 50px;
-  line-height: 60px;
+  line-height: 10px;
   
 }
 .column2 {
@@ -27,7 +27,7 @@
   
   margin-top: 50px;
   margin-bottom: 50px;
-  line-height: 60px;
+  line-height: 10px;
 }
 
 /* Clear floats after the columns */
@@ -37,7 +37,10 @@
   clear: both;
 }
 
+.interests {
+  font-size: 10px;
 
+}
 
 
 
