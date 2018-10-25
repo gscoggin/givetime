@@ -3,7 +3,7 @@ import "./Feed.css";
 import "../Button/Button-2.css";
 
 const FeedListItem = props => (
-    <div class = "callout clearfix horizontal-center">
+    <div className = "callout clearfix horizontal-center">
         <h5>
             Example Opportunity
             <a href='#' className="button radius float-right eventBtn">See Event</a>
