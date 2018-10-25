@@ -3,7 +3,7 @@ import React from 'react';
 
 
 import icon_calendar from '../../resources/images/icons/calendar.png';
-import icon_location from '../../resources/images/icons/location.png';
+
 import Zoom from 'react-reveal/Zoom';
 import '../../resources/styles.css';
 
@@ -25,7 +25,7 @@ const MyEvent = () => {
                     }}   
                   ></div>
                   <div className="vn_title">
-                    Event Name Date and Time
+                    Event Name<br/>Date and Time
                   </div>
                   <div className="vn_desc">
                     Event Info and Location
@@ -36,32 +36,51 @@ const MyEvent = () => {
             </div>
             </Zoom>
           
+            
             <Zoom duration={500} delay={500}>
 
             <div className="vn_item">
               <div className="vn_outer">
                 <div className="vn_inner">
-                  <div className="vn_icon_square bck_yellow"></div>
+                  <div className="vn_icon_square bck_red"></div>
                   <div
                     className="vn_icon"
                     style={{
-                      background: `url(${icon_location})`
-
-                    }}
-                  
-                  
+                      background: `url(${icon_calendar})`
+                    }}   
                   ></div>
                   <div className="vn_title">
-                    Event Location
+                    Event Name<br/>Date and Time
                   </div>
                   <div className="vn_desc">
-                    Moscone Center, San Francisco, Ca
+                    Event Info and Location
+                  
                   </div>
-
                 </div>
-
               </div>
+            </div>
+          </Zoom>
+          <Zoom duration={500} delay={1000}>
 
+            <div className="vn_item">
+              <div className="vn_outer">
+                <div className="vn_inner">
+                  <div className="vn_icon_square bck_red"></div>
+                  <div
+                    className="vn_icon"
+                    style={{
+                      background: `url(${icon_calendar})`
+                    }}   
+                  ></div>
+                  <div className="vn_title">
+                    Event Name<br/>Date and Time
+                  </div>
+                  <div className="vn_desc">
+                    Event Info and Location
+                  
+                  </div>
+                </div>
+              </div>
             </div>
           </Zoom>
 
