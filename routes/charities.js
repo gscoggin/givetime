@@ -20,7 +20,7 @@ router
 	.put(charitiesController.update);
 
 router
-	.route("/signup/charity")
+	.route("/charitysignup")
 	.post(charitiesController.create);
 
 module.exports = router;
