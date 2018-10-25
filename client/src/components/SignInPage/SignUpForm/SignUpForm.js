@@ -146,8 +146,8 @@ class SignUpForm extends Component {
 
         </div>
         
-        <div class= "text-center">
-          <button class ="button radius signupBtn" onClick={this.handleFormSubmit}>Next</button>
+        <div className= "text-center">
+          <button className ="button radius signupBtn" onClick={this.handleFormSubmit}>Next</button>
         </div>
         
       </form>

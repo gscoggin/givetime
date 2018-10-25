@@ -1,7 +1,6 @@
 
 
 import React from "react";
-import Foundation from 'react-foundation';
 import SignUpForm from "./../SignUpForm";
 
 import "./SignUpHero.css"

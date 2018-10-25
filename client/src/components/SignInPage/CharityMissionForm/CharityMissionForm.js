@@ -1,6 +1,5 @@
 
 import React from "react";
-import Button from 'react-foundation';
 import CharityMissionFormBack from "./CharityMissionFormBack";
 import SubmitButton from "./SubmitButton";
 import "./CharityMissionForm.css"

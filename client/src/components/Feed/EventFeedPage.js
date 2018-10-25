@@ -1,6 +1,5 @@
 import React from "react";
 import NavSideBar from "../Nav"
-import FeedList from "./FeedList.js";
 import FeedListItem from "./FeedListItem.js";
 import "./EventFeedPage.css";
 import MyEvent from '../MyEvents/MyEvent';
