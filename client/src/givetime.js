@@ -8,7 +8,7 @@ import SignInHero from './components/SignInPage/SignInHero/SignInHero';
 import FullScreenHero from './components/FullScreenHero';
 import EventFeedPage from './components/Feed';
 import InterestSelectionHero from './components/SignInPage/SignInHero/InterestSelectionHero';
-
+import Footer from './components/Nav/Footer'
 
 class GiveTime extends Component {
   render() {
@@ -43,9 +43,10 @@ class GiveTime extends Component {
       <InterestSelectionHero>
           <Link to="/interests"></Link>
       </InterestSelectionHero>
-
+     
 
       </div>
+     
       
 
 
