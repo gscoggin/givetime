@@ -1,8 +1,8 @@
 import React from "react";
 import NavSideBar from "../Nav"
-import FeedList from "./FeedList.js";
 import FeedListItem from "./FeedListItem.js";
 import "./EventFeedPage.css";
+import MyEvent from '../MyEvents/MyEvent';
 
 const EventFeedPage = ({ size, children }) => (
     <div>
@@ -15,6 +15,10 @@ const EventFeedPage = ({ size, children }) => (
             <h2>Event Feed</h2>
             <FeedListItem />
         </div>
+        <div>
+         <MyEvent/>
+        </div>
+        
     </div>
 );
 

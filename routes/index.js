@@ -1,15 +1,13 @@
 const express = require('express');
-const api = require('./api');
 const charities = require('./charities');
-const path = require('path');
+const users = require('./users');
+const events = require('./events');
+const auth = require('./auth');
 const router = express.Router();
 
-router.use('/api', api);
-router.use('/charities', charities);
-
-// If no API routes are hit, send the React app
-router.use(function(req, res) {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
+//API routes
+router.use('/api', users);
+router.use('/api', events);
+router.use('/api', charities);
 
 module.exports = router;

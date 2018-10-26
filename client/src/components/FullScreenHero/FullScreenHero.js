@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Link } from 'react-router-dom';
-import Foundation from 'react-foundation';
 import Button from './../Button'
 import "./FullScreenHero.css"
 

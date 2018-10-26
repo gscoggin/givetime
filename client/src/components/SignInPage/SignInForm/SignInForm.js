@@ -1,6 +1,5 @@
 
 import React from "react";
-import Foundation from 'react-foundation';
 import SignInFormBack from "./SignInFormBack";
 import SignInButton from "./SignInButton";
 import "./SignInForm.css"
@@ -8,7 +7,7 @@ import "./SignInForm.css"
 const SignInForm = ({ size, children }) => (
 
   <SignInFormBack>
-  <form action="form-control">
+  <form action="http://localhost:3001/api/signin" method="POST">
   
   <div className="inputs">
   <input

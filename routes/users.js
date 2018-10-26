@@ -1,10 +1,49 @@
 const mongoose = require('mongoose');
 const passport = require('passport');
 const router = require('express').Router();
-const auth = require('../auth');
+const volunteerController = require('../controllers/volunteerController');
+const auth = require('./auth');
 const Users = mongoose.model('Users');
-
+const Passport = require('../config/passport');
 //POST new user route (optional, everyone has access)
+
+
+// router.post('/register',
+//   passport.authenticate('local', 
+//   { successRedirect: '/',
+//     failureRedirect: '/login',
+//     failureFlash: true })
+// );
+
+// router.post('/signin',
+//   passport.authenticate('local', { successRedirect: '/',
+//   failureRedirect: '/signin',
+//   failureFlash: true })
+// );
+
+router.post('/signin', passport.authenticate('local', { failureRedirect: '/?error=LoginError', failureFlash: true }), (req, res, next) => {
+  console.log('/login handler', req.session);
+  req.session.save((err) => {
+      if (err) {
+          return next(err);
+      }
+
+      res.status(200).send('OK');
+  });
+});
+
+
+
+
+router
+  .route("/register")
+  .post(volunteerController.create);
+
+
+router
+  .route("/users")
+  .get(volunteerController.findAll);
+
 router.post('/', auth.optional, (req, res, next) => {
   const { body: { user } } = req;
 
@@ -34,7 +73,8 @@ router.post('/', auth.optional, (req, res, next) => {
 
 //POST login route (optional, everyone has access)
 router.post('/login', auth.optional, (req, res, next) => {
-  const { body: { user } } = req;
+  const { body: { user }, session } = req;
+  console.log(session);
 
   if(!user.email) {
     return res.status(422).json({

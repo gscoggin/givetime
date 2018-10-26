@@ -1,7 +1,4 @@
-
-
 import React from "react";
-import Foundation from 'react-foundation';
 import InterestSelectionForm from "./../InterestSelectionForm";
 
 import "./SignUpHero.css"
