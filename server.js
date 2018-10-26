@@ -16,9 +16,25 @@ const PORT = process.env.PORT || 3001;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(session({ secret: "cats" }));
+// app.use(session({ 
+//   secret: "cats", 
+//   name: "cats",
+//   // store: "sessionStore", 
+//   // connect-mongo session store
+//   proxy: true,
+//   resave: true,
+//   saveUninitialized: true
+//   }));
 app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.session({ 
+  secret: "cats", 
+  name: "cats",
+  // store: "sessionStore", 
+  // connect-mongo session store
+  proxy: true,
+  resave: true,
+  saveUninitialized: true
+  }));
 app.use(cors());
 
 if (isProduction === true) {

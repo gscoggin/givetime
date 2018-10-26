@@ -5,15 +5,15 @@ const passport = require('passport')
 
 passport.use(new LocalStrategy(
   function(username, password, done) {
-    volunteer.findOne({ username: username }, function(err, user) {
+    volunteer.findOne({ username: username }, function(err, volunteer) {
       if (err) { return done(err); }
-      if (!user) {
+      if (!volunteer) {
         return done(null, false, { message: 'Incorrect username.' });
       }
-      if (!user.validPassword(password)) {
+      if (!volunteer.validPassword(password)) {
         return done(null, false, { message: 'Incorrect password.' });
       }
-      return done(null, user);
+      return done(null, volunteer);
     });
   }
 ));

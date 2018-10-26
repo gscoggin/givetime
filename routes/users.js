@@ -32,17 +32,23 @@ router.post('/signin', passport.authenticate('local', { failureRedirect: '/?erro
   });
 });
 
+router.post('/api/signin', function(req, res, next) {
+  console.log("hi george");
+});
 
+
+// router.post('/signup', function(req, res, next) {
+//   console.log(req.body.username);
+// })
 
 
 router
-  .route("/register")
+  .route("/signup")
   .post(volunteerController.create);
 
-
-router
-  .route("/users")
-  .get(volunteerController.findAll);
+// router
+//   .route("/users")
+//   .get(volunteerController.findAll);
 
 router.post('/', auth.optional, (req, res, next) => {
   const { body: { user } } = req;
