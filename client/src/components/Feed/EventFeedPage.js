@@ -3,6 +3,7 @@ import NavSideBar from "../Nav"
 import FeedListItem from "./FeedListItem.js";
 import "./EventFeedPage.css";
 import MyEvent from '../MyEvents/MyEvent';
+import Footer from '../Nav/Footer';
 
 const EventFeedPage = ({ size, children }) => (
     <div>
@@ -18,7 +19,7 @@ const EventFeedPage = ({ size, children }) => (
         <div>
          <MyEvent/>
         </div>
-        
+        <Footer /> 
     </div>
 );
 
