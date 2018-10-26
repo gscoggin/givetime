@@ -4,17 +4,14 @@ const router = require('express').Router();
 const volunteerController = require('../controllers/volunteerController');
 const auth = require('./auth');
 const Users = mongoose.model('Users');
-<<<<<<< Updated upstream:routes/users.js
 const Passport = require('../config/passport');
-=======
 
-router.post('/register', auth.optional, (req, res, next) => {
-  console.log(res)
-});
-
+// router.post('/register', auth.optional, (req, res, next) => {
+//   console.log(res)
+// });
 
 
->>>>>>> Stashed changes:routes/api/users.js
+
 //POST new user route (optional, everyone has access)
 
 
