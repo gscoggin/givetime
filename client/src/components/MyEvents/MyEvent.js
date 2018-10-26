@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Slide from 'react-reveal/Slide';
 
 
 import icon_calendar from '../../resources/images/icons/calendar.png';
@@ -7,13 +7,15 @@ import icon_calendar from '../../resources/images/icons/calendar.png';
 import Zoom from 'react-reveal/Zoom';
 import '../../resources/styles.css';
 
+
 const MyEvent = () => {
   return (
+  <Slide left delay={1000}>
     <div className="bck_black">
         <div className="center_wrapper">
           <div className="vn_wrapper">
-
-          <Zoom duration={500}>
+          
+          <Zoom duration={1500}>
           <div className="vn_item">
               <div className="vn_outer">
                 <div className="vn_inner">
@@ -37,7 +39,7 @@ const MyEvent = () => {
             </Zoom>
           
             
-            <Zoom duration={500} delay={500}>
+            <Zoom duration={1500} delay={1500}>
 
             <div className="vn_item">
               <div className="vn_outer">
@@ -60,7 +62,7 @@ const MyEvent = () => {
               </div>
             </div>
           </Zoom>
-          <Zoom duration={500} delay={1000}>
+          <Zoom duration={1500} delay={2000}>
 
             <div className="vn_item">
               <div className="vn_outer">
@@ -83,6 +85,7 @@ const MyEvent = () => {
               </div>
             </div>
           </Zoom>
+          
 
             
 
@@ -93,6 +96,7 @@ const MyEvent = () => {
 
       
     </div>
+    </Slide>
   );
 };
 
