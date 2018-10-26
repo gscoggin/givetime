@@ -17,9 +17,24 @@ class SignUpForm extends Component {
     }
   }
 
+<<<<<<< Updated upstream
   handleInputChange = event => {
     let value = event.target.value;
     const name = event.target.name;
+=======
+  <FormBack>
+  <form method="POST" action="/register">
+  
+  <div className="inputs">
+  <input
+    //  onChange={props.handleInputChange}
+    //  value="username"
+     name="username"
+     type="text"
+     className="form-control"
+     placeholder="Username" 
+     id="username" />
+>>>>>>> Stashed changes
 
     this.setState({
       [name]: value
