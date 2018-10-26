@@ -19,7 +19,7 @@ import API from "../../../utils/API";
   handleFormSubmit = event => {
     event.preventDefault();
   
-      API.newVolunteer({
+      API.newSignin({
         email: this.state.email,
         firstName: this.state.firstName,
         lastName: this.state.lastName,

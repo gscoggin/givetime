@@ -28,15 +28,19 @@ const Passport = require('../config/passport');
 //   failureFlash: true })
 // );
 
-router.post('/signin', passport.authenticate('local', { failureRedirect: '/?error=LoginError', failureFlash: true }), (req, res, next) => {
-  console.log('/login handler', req.session);
-  req.session.save((err) => {
-      if (err) {
-          return next(err);
-      }
+router.post('/signin', passport.authenticate('local', { 
+  successRedirect: 'http://localhost:3000/eventfeed',
+  failureRedirect: '/?error=LoginError', failureFlash: true }), (req, res, next) => {
+  // console.log('/login handler', req.session);
+  // req.session.save((err) => {
+  //     if (err) {
+  //         return next(err);
+  //     }
 
-      res.status(200).send('OK');
-  });
+  //     res.status(200).send('OK');
+  // });
+  console.log("Hey this is your request ", req);
+  res.send(req.user)
 });
 
 router.post('/api/signin', function(req, res, next) {

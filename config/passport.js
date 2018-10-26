@@ -3,6 +3,19 @@ const volunteer = mongoose.model('Volunteer');
 const passport = require('passport')
   , LocalStrategy = require('passport-local').Strategy;
 
+  
+passport.serializeUser(function(user, done) {
+  done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done) {
+  User.findById(id, function(err, user) {
+    done(err, user);
+  });
+});
+
+
+
 passport.use(new LocalStrategy(
   function(username, password, done) {
     volunteer.findOne({ username: username }, function(err, volunteer) {
