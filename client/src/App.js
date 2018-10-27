@@ -7,6 +7,7 @@ import CharityMissionHero from './components/SignInPage/CharityMissionHero/Chari
 import SignInHero from './components/SignInPage/SignInHero/SignInHero';
 import FullScreenHero from './components/FullScreenHero';
 import EventFeedPage from './components/Feed';
+import CharityEvent from './components/SignInPage/CharityEventPage';
 import InterestSelectionHero from './components/SignInPage/SignUpHero/InterestSelectionHero';
 
 
@@ -21,6 +22,7 @@ const App = () => (
       <Route exact path="/charitysignup" component={CharitySignUpHero} />
       <Route exact path="/charitymissionform" component={CharityMissionHero} />
       <Route  exact path="/eventfeed" component={EventFeedPage} />
+      <Route  exact path="/charityevent" component={CharityEvent} />
       <Route  exact path="/interests" component={InterestSelectionHero} />
 
 
