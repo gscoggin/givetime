@@ -4,6 +4,8 @@ const db = require("./models");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const cors = require("cors");
+const passport = require('passport')
+var session = require("express-session")
 
 //Configure isProduction variable
 const isProduction = process.env.NODE_ENV === 'production';
@@ -14,7 +16,25 @@ const PORT = process.env.PORT || 3001;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+// app.use(session({ 
+//   secret: "cats", 
+//   name: "cats",
+//   // store: "sessionStore", 
+//   // connect-mongo session store
+//   proxy: true,
+//   resave: true,
+//   saveUninitialized: true
+//   }));
+app.use(passport.initialize());
+app.use(passport.session({ 
+  secret: "cats", 
+  name: "cats",
+  // store: "sessionStore", 
+  // connect-mongo session store
+  proxy: true,
+  resave: true,
+  saveUninitialized: true
+  }));
 app.use(cors());
 
 if (isProduction === true) {
