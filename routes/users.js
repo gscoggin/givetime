@@ -9,12 +9,7 @@ const Passport = require('../config/passport');
 // router.post('/register', auth.optional, (req, res, next) => {
 //   console.log(res)
 // });
-
-
-
 //POST new user route (optional, everyone has access)
-
-
 // router.post('/register',
 //   passport.authenticate('local', 
 //   { successRedirect: '/',
@@ -29,6 +24,7 @@ const Passport = require('../config/passport');
 // );
 
 router.post('/signin', passport.authenticate('local', { 
+  // comment out line 27 to see the response object from the validation. 
   successRedirect: 'http://localhost:3000/eventfeed',
   failureRedirect: '/?error=LoginError', failureFlash: true }), (req, res, next) => {
   // console.log('/login handler', req.session);
