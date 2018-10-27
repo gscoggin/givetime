@@ -1,87 +1,147 @@
-
-import React from "react";
+import React, { Component } from "react";
 import CharityFormBack from "./CharityFormBack";
-import SignInButton from "./../SignInButton";
-import "./CharitySignUpForm.css"
+import "../../Button/Button-2.css";
+import "./CharitySignUpForm.css";
+import API from "../../../utils/API";
 
-const CharitySignUpForm = ({ size, children }) => (
+class CharitySignUpForm extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      username: "",
+      charityName: "",
+      category: "",
+      email: "",
+      phoneNumber: "",
+      regulated: false,
+      mission: "",
+    }
+  }
 
-  <CharityFormBack>
-  <form action="charity-form-control">
+  handleInputChange = event => {
+    let value = event.target.value;
+    const name = event.target.name;
+
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.username && this.state.charityName && this.state.category && this.state.email && this.state.phoneNumber && this.state.regulated) {
+      API.newCharity({
+        username: this.state.username,
+        name: this.state.charityName,
+        password: "placeholder",
+        category: this.state.category,
+        email: this.state.email,
+        phoneNumber: this.state.phoneNumber,
+        irsStatus: this.state.regulated,
+        mission: this.state.mission
+      })
+    } else {
+      alert(
+        'Please complete all fields.'
+      )
+    }
+    }
   
-  <div className="inputs">
-  <input
-    //  onChange={props.handleInputChange}
-    //  value="username"
-     name="username"
-     type="text"
-     className="form-control"
-     placeholder="Username" 
-     id="username" />
-  
-  <input
-    //  onChange={props.handleInputChange}
-    //  value={"firstname"}
-     name="charityname"
-     type="text"
-     className="form-control"
-     placeholder="Charity Name" 
-     id="charityname" />
- 
-  <input
-    //  onChange={props.handleInputChange}
-    //  value={props.value}
-     name="charitylist"
-     type="text"
-     className="form-control"
-     placeholder="Charity Category" 
-      />
+
+  render() {
+
+    return (
+
+      <CharityFormBack>
+      <form action="charity-form-control">
       
- 
-  <input
-    //  onChange={props.handleInputChange}
-    //  value={props.value}
-     name="charityemail"
-     type="text"
-     className="form-control"
-     placeholder="Email" 
-     id="charityemail" />
- 
-  <input
-    //  onChange={props.handleInputChange}
-    //  value={props.value}
-     name="phonenumber"
-     type="text"
-     className="form-control"
-     placeholder="Phone Number" 
-     id="phonenumber" />
-  <p>Are you a 501-C3 Charity?</p>
-  <input 
-    type="radio" 
-    className="editList" 
-    id="charityYes" 
-    value="charityYes"/>
-  <label htmlFor="charityYes">Yes</label>
+      <div className="inputs">
+      <input
+        onChange={this.handleInputChange}
+        value={this.state.username}
+        name="username"
+        type="text"
+        className="form-control"
+        placeholder="Username" 
+        id="username" />
+      
+      <input
+        onChange={this.handleInputChange}
+        value={this.state.charityName}
+        name="charityName"
+        type="text"
+        className="form-control"
+        placeholder="Charity Name" 
+        id="charityName" />
+      
+      <label>Charity Category
+        <select 
+          className="form-control"
+          onChange={this.handleInputChange}
+          value={this.state.category}
+          name="category"
+          id="category">
+          <option value="placeholder" disabled selected hidden>Please select an option</option>
+          <option value="animals">Animals</option>
+          <option value="children">Children</option>
+          <option value="education">Education</option>
+          <option value="community building">Community Building</option>
+        </select>
+      </label>
+          
+    
+      <input
+        onChange={this.handleInputChange}
+        value={this.state.email}
+        name="email"
+        type="text"
+        className="form-control"
+        placeholder="Email" 
+        id="email" />
+    
+      <input
+        onChange={this.handleInputChange}
+        value={this.state.phoneNumber}
+        name="phoneNumber"
+        type="text"
+        className="form-control"
+        placeholder="Phone Number" 
+        id="phoneNumber" />
 
-  <input 
-    type="radio" 
-    className="editList" 
-    id="charityNo" 
-    value="charityNo"/>
-  <label htmlFor="charityNo">No</label>
+      <label>Are you a 501(c)(3) charity?
+        <select required 
+          className="form-control"
+          onChange={this.handleInputChange}
+          value={this.state.regulated}
+          name="regulated"
+          id="regulated">
+          <option value="placeholder" hidden>Please select from dropdown</option>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+      </label>
 
+      </div>
 
+      <label>Mission Statement</label>
+      <textarea 
+        className = "form-control"
+        onChange={this.handleInputChange}
+        value={this.state.mission}
+        name="mission"
+        id="mission"/>
 
-  </div>
-  
-  <SignInButton />
-  
-</form>
-  
-</CharityFormBack>
+      <div className= "text-center">
+        <button className ="button radius signupBtn" onClick={this.handleFormSubmit}>Next</button>
+      </div>
+      
+    </form>
+      
+    </CharityFormBack>
 
+    )
 
-
-);
+  }
+};
 
 export default CharitySignUpForm;
