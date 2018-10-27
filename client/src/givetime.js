@@ -8,6 +8,7 @@ import SignInHero from './components/SignInPage/SignInHero/SignInHero';
 import FullScreenHero from './components/FullScreenHero';
 import EventFeedPage from './components/Feed';
 import InterestSelectionHero from './components/SignInPage/SignInHero/InterestSelectionHero';
+import CharityEvent from './components/SignInPage/CharityEventPage';
 import Footer from './components/Nav/Footer'
 
 class GiveTime extends Component {
@@ -21,6 +22,10 @@ class GiveTime extends Component {
       <EventFeedPage>
         <Link to="/eventfeed"></Link>
       </EventFeedPage>
+
+      <CharityEvent>
+        <Link to="/charityevent"></Link>
+      </CharityEvent>
 
       <SignInHero>
         <Link to="/signin"></Link>

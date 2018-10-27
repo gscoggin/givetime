@@ -7,6 +7,7 @@ import Footer from '../Nav/Footer';
 
 
 
+
 class EventFeedPage extends Component {
     state = {
         show: true
@@ -25,24 +26,27 @@ class EventFeedPage extends Component {
     render () {
         return (
             
-            <div className="row">
+            <div className="grid-x">
 
-        <div className="small-12 medium-12 columns">
+        <div className="cell small-2 large-2">
         <NavSideBar 
             toggle={this.showToggle}/>
         </div>
-
-        <div className = "content col md-10">
+        <div className='grid-x'>
+        <div className = "content cell small-7 large-10">
             <div className= "blank "></div>
             <h2>Event Feed</h2>
             <FeedListItem />
         </div>
+        </div>
+        
         <div>
          <MyEvent
             state={this.state.show}
             
             />
         </div>
+        
         <Footer /> 
     </div>
 
