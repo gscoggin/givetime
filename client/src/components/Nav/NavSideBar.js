@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import "./Nav.css";
 import Button from '@material-ui/core/Button';
 
-const NavSideBar = ({ size, children}) => (
+const NavSideBar = (props) => (
     <div className = "sideNav">
     <img src="http://www.rsa.neu.edu/wp-content/uploads/blank-profile-picture.png"/>
     <h3>Name</h3>
@@ -13,7 +13,7 @@ const NavSideBar = ({ size, children}) => (
     <Button className="sideNavItem" color="inherit">Profile</Button>
     <Button className="sideNavItem" color="inherit">Find Events in My Area</Button>
 
-    <Button className="sideNavItem" color="inherit">My Events</Button>
+    <Button className="sideNavItem" color="inherit" onClick={props.toggle}>My Events</Button>
     <Button className="sideNavItem" color="inherit">Sign Out</Button>
 
     

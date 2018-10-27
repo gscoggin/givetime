@@ -8,8 +8,11 @@ const volunteerSchema = new Schema({
     lastName: { type: String, required: true, trim: true },
     email: { type: String, required: true, trim: true },
     phoneNumber: { type: String, required: true, trim: true },
-
 });
+volunteerSchema.methods.validPassword = function( pwd ) {
+    // EXAMPLE CODE!
+    return ( this.password === pwd );
+};
 
 const Volunteer = mongoose.model("Volunteer", volunteerSchema);
 

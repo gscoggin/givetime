@@ -75,7 +75,7 @@ class SignUpForm extends Component {
     return (
 
       <FormBack>
-        <form action="form-control">
+        <form action="http://localhost:3001/api/signup" method="POST">
         
         <div className="inputs">
         <input

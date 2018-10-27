@@ -4,16 +4,62 @@ const router = require('express').Router();
 const volunteerController = require('../controllers/volunteerController');
 const auth = require('./auth');
 const Users = mongoose.model('Users');
+const Passport = require('../config/passport');
+
+// router.post('/register', auth.optional, (req, res, next) => {
+//   console.log(res)
+// });
+
+
 
 //POST new user route (optional, everyone has access)
 
-router
-  .route("/register")
-  .post(volunteerController.create);
+
+// router.post('/register',
+//   passport.authenticate('local', 
+//   { successRedirect: '/',
+//     failureRedirect: '/login',
+//     failureFlash: true })
+// );
+
+// router.post('/signin',
+//   passport.authenticate('local', { successRedirect: '/',
+//   failureRedirect: '/signin',
+//   failureFlash: true })
+// );
+
+router.post('/signin', passport.authenticate('local', { 
+  successRedirect: 'http://localhost:3000/eventfeed',
+  failureRedirect: '/?error=LoginError', failureFlash: true }), (req, res, next) => {
+  // console.log('/login handler', req.session);
+  // req.session.save((err) => {
+  //     if (err) {
+  //         return next(err);
+  //     }
+
+  //     res.status(200).send('OK');
+  // });
+  console.log("Hey this is your request ", req);
+  res.send(req.user)
+});
+
+router.post('/api/signin', function(req, res, next) {
+  console.log("hi george");
+});
+
+
+// router.post('/signup', function(req, res, next) {
+//   console.log(req.body.username);
+// })
+
 
 router
-  .route("/users")
-  .get(volunteerController.findAll);
+  .route("/signup")
+  .post(volunteerController.create);
+
+// router
+//   .route("/users")
+//   .get(volunteerController.findAll);
 
 router.post('/', auth.optional, (req, res, next) => {
   const { body: { user } } = req;
@@ -44,7 +90,8 @@ router.post('/', auth.optional, (req, res, next) => {
 
 //POST login route (optional, everyone has access)
 router.post('/login', auth.optional, (req, res, next) => {
-  const { body: { user } } = req;
+  const { body: { user }, session } = req;
+  console.log(session);
 
   if(!user.email) {
     return res.status(422).json({
