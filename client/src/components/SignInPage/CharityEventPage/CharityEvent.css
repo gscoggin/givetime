@@ -1,0 +1,13 @@
+.feedList {
+    list-style-type: none;
+}
+
+h5 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+p.feed {
+    text-align: left;
+
+}

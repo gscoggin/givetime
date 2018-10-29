@@ -1,0 +1,22 @@
+h2 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+h3 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.content {
+    margin-left: 275px;
+}
+
+.callout {
+    width: 90%;
+    margin-bottom: 40px;
+}
+
+.blank {
+    height: 20px;
+}
+
+

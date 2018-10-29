@@ -26,14 +26,14 @@ class EventFeedPage extends Component {
     render () {
         return (
             
-            <div className="grid-x">
+            <div>
 
-        <div className="cell small-2 large-2">
+        <div>
         <NavSideBar 
             toggle={this.showToggle}/>
         </div>
-        <div className='grid-x'>
-        <div className = "content cell small-7 large-10">
+        <div>
+        <div className = "content">
             <div className= "blank "></div>
             <h2>Event Feed</h2>
             <FeedListItem />
