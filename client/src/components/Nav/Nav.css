@@ -29,3 +29,15 @@ img {
     width: 30%;
     border-radius: 1000px;
 }
+
+.charSideNav {
+    color: white;
+    height:100%;
+    width: 200px;
+    background-color:#fff;
+    position:fixed!important;
+    z-index:1;
+    overflow:auto;
+    background: #650F11;
+    text-align: center;
+}
