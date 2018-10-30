@@ -11,6 +11,10 @@ export default {
     
     newSignin: function(signInData) {
         return axios.post("/api/signin", signInData)
+    },
+
+    getUserData: function() {
+        return axios.get("/api/userdata")
     }
     
 }
