@@ -51,7 +51,7 @@ router.post('/signin',
   function(req, res) {
     localStorage.setItem('userData', req.user);
     console.log(localStorage.getItem('userData'));
-    res.redirect('http://localhost:3000/eventfeed');
+    res.redirect('/eventfeed');
     // res.send(req.user);
   }
 );
