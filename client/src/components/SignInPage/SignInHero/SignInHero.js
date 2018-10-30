@@ -1,27 +1,27 @@
 
-import React from "react";
+import React, {Component} from "react";
 import SignInForm from "./../SignInForm";
 
 import "./SignInHero.css"
+import { defaultProps } from "recompose";
 
 
 // This Col component lets us size bootstrap columns with less syntax
 // e.g. <Col size="md-12"> instead of <div className="col-md-12">
-const SignInHero = ({ size, children }) => (
-  
+class SignInHero extends Component {
 
+render() {
 
-<div className="sign-in-hero-full-screen">
+    return (
 
+        <div className="sign-in-hero-full-screen">
 
-   <SignInForm />
-  
-  
-  
+        <SignInForm onUpdate = {this.props.onUpdate}/>
 
 </div>
 
-);
+)}
+};
 
 
 
