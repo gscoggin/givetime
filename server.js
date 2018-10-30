@@ -6,6 +6,7 @@ const routes = require("./routes");
 const cors = require("cors");
 const passport = require('passport')
 var session = require("express-session")
+var cookieParser = require('cookie-parser');
 
 //Configure isProduction variable
 const isProduction = process.env.NODE_ENV === 'production';
@@ -36,6 +37,8 @@ app.use(passport.session({
   saveUninitialized: true
   }));
 app.use(cors());
+
+app.use(cookieParser());
 
 if (isProduction === true) {
   app.use(express.static("client/build"));
