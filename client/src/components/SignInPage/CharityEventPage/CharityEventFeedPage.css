@@ -1,0 +1,36 @@
+h2 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+h3 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.content {
+    margin-left: 275px;
+}
+
+.callout {
+    width: 90%;
+    margin-bottom: 60px;
+}
+
+.blank {
+    height: 20px;
+}
+
+.charityProfile {
+    text-align: left;
+    padding-right: 20px;
+    
+    
+}
+.charityImages {
+    margin-top: 0; 
+    width: 40%;
+    float: left;
+    border-radius: 0px;
+    padding: 10px 30px 12px 0px;
+   
+}
+
