@@ -61,7 +61,6 @@ router.post('/signin',
     // res.redirect('/eventfeed');
     // res.send(req.user);
   }
-}
 );
 
 router.get('/userdata', function(req, res) {
