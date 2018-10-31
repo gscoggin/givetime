@@ -54,7 +54,7 @@ router.post('/signin',
     console.log(localStorage.getItem('userData'));
 
     if(process.env.NODE_ENV === 'production') {
-      res.redirect('https://still-atoll-52696.herokuapp.com/eventfeed');
+      res.redirect('/eventfeed');
     } else {
       res.redirect('/eventfeed');
     }
