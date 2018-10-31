@@ -5,7 +5,7 @@ import CharityFeedListItem from "./CharityFeedListItem.js";
 import "./CharityEvent.css";
 import MyEvent from '../../MyEvents/MyEvent';
 import Footer from '../../Nav/Footer';
-import CreateEvent from './CreatEvent';
+import CreateEvent from './CreateEvent';
 import CreateProfile from './CreateProfile';
 
 
@@ -59,7 +59,7 @@ class CharityEvent extends Component {
         <div>
         <div className = "content">
             <div className= "blank "></div>
-            <h2>Event Feed</h2>
+            
             <CharityFeedListItem />
         </div>
         </div>

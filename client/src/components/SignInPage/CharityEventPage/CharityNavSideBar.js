@@ -10,7 +10,7 @@ const CharityNavSideBar = (props) => (
     {/* <a className= "sideNavItem" href = "#">Profile</a>
     <a className= "sideNavItem" href = "#">Events</a>
     <a className= "sideNavItem" href = "#">Sign Out</a> */}
-    <Button className="sideNavItem" color="inherit"onClick={props.createProfiletoggle}>Profile</Button>
+    <Button className="sideNavItem" color="inherit">Profile</Button>
     <Button className="sideNavItem" color="inherit" onClick={props.createtoggle}>Create an Event</Button>
 
     <Button className="sideNavItem" color="inherit" onClick={props.toggle}>My Events</Button>
