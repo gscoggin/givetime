@@ -9,6 +9,12 @@ body {
 
 .bck_black {
     background: #3c3c3c;
+    height: 450px;
+    overflow-y: scroll;
+}
+.footer_bck_black {
+    background: #3c3c3c;
+   
 }
 .bck_white {
     background: #ffffff;
@@ -177,12 +183,15 @@ footer .footer_copyright {
     width:50%;
     color:#ffffff;
     text-align: center;
+    
 }
 .event_vn_item {
+    height: 500px;
     display: flex;
     width: 80%;
     color:#ffffff;
     text-align: center;
+    overflow-y: scroll;
 }
                       
 .vn_item .vn_outer {

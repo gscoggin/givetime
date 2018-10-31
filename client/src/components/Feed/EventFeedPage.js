@@ -10,7 +10,7 @@ import API from "../../utils/API";
 
 class EventFeedPage extends Component {
     state = {
-        show: true,
+        show: false,
         profile: {}   
     }
 

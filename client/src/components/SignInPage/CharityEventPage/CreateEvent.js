@@ -11,7 +11,7 @@ class CreateEvent extends Component {
   
   render() {
     return (
-      this.props.state ? <div/> : <LeftSlide/>
+      !this.props.state ? <div/> : <LeftSlide/>
       
     
     )
