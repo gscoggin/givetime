@@ -1,0 +1,8 @@
+{ _id: 5bd3698349789e435de02bd9,
+  email: 'tamhong.sd@gmail.com',
+  firstName: 'Tam',
+  lastName: 'Hong',
+  password: 'whatever',
+  phoneNumber: '8585313571',
+  username: 'tamhong',
+  __v: 0 }

@@ -5,16 +5,28 @@ import SignInButton from "./SignInButton";
 import "./SignInForm.css"
 import API from "../../../utils/API";
 
-
-
   class SignInForm extends Component {
     constructor(props) {
       super(props)
       this.state = {
         username: "",
         password: "",
+        userData: {}
       }
     }
+
+    update = (e) => {
+      console.log(e.target.value);
+      const test = e.target.value;
+      this.props.onUpdate(e.target.value);
+      this.setState({userData: e.target.value});
+      localStorage.setItem('user', test);
+    }
+
+    store = data => {
+      
+    }
+
 
   handleFormSubmit = event => {
     event.preventDefault();
@@ -37,12 +49,11 @@ render() {
   return (
 //onst SignInForm = ({ size, children }) => (
   <SignInFormBack>
-  <form action="http://localhost:3001/api/signin" method="POST">
+  <form action="/api/signin" method="POST">
   
   <div className="inputs">
   <input
-    //  onChange={props.handleInputChange}
-    //  value="username"
+    onChange={this.update}
      name="username"
      type="text"
      className="form-control"
