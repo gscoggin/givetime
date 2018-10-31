@@ -1,7 +1,7 @@
 
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import SignInFormBack from "./SignInFormBack";
-import SignInButton from "./SignInButton";
 import "./SignInForm.css"
 import API from "../../../utils/API";
 
@@ -11,75 +11,82 @@ import API from "../../../utils/API";
       this.state = {
         username: "",
         password: "",
-        userData: {}
+        userData: {},
+        redirect: false
       }
     }
 
-    update = (e) => {
-      console.log(e.target.value);
-      const test = e.target.value;
-      this.props.onUpdate(e.target.value);
-      this.setState({userData: e.target.value});
-      localStorage.setItem('user', test);
+    setRedirect = () => {
+      this.setState({
+        redirect:true
+      })
     }
 
-    store = data => {
-      
+    renderRedirect = () => {
+      if (this.state.redirect) {
+        return <Redirect to='/eventfeed' />
+      }
     }
+
+    handleInputChange = event => {
+      let value = event.target.value;
+      const name = event.target.name;
+  
+      this.setState({
+        [name]: value
+      });
+    };
 
 
   handleFormSubmit = event => {
     event.preventDefault();
-  
-      API.newSignin({
-        email: this.state.email,
-        firstName: this.state.firstName,
-        lastName: this.state.lastName,
-        password: this.state.password,
-        phoneNumber: this.state.phoneNumber,
-        username: this.state.username
-      })
-        .then(res => console.log(res.data))
-        .catch(err => console.log(err));
+
+    API.newSignin({
+      username: this.state.username,
+      password: this.state.password
+    })
+      .then(this.setRedirect)
+      .catch(err => console.log(err));
+      
     }
 
 
 render() {
 
   return (
-//onst SignInForm = ({ size, children }) => (
   <SignInFormBack>
-  <form action="/api/signin" method="POST">
+  <form>
   
   <div className="inputs">
   <input
-    onChange={this.update}
-     name="username"
-     type="text"
-     className="form-control"
-     placeholder="Username" 
-     id="username" />
+    onChange={this.handleInputChange}
+    value={this.state.username}
+    name="username"
+    type="text"
+    className="form-control"
+    placeholder="Username" 
+    id="username" />
   
   <input
-    //  onChange={props.handleInputChange}
-    //  value={"firstname"}
-     name="password"
-     type="text"
-     className="form-control"
-     placeholder="Password" 
-     id="firstname" />
+    onChange={this.handleInputChange}
+    value={this.state.password}
+    name="password"
+    type="text"
+    className="form-control"
+    placeholder="Password" 
+    id="password" />
  
   
 
   </div>
+
+  {this.renderRedirect()}
   
-  <SignInButton />
+  <button onClick={this.handleFormSubmit} className="signin-button button center">Sign in</button>
   
 </form>
   
 </SignInFormBack>
-
-
 
     );
   };

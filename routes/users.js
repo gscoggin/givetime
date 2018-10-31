@@ -53,15 +53,23 @@ router.post('/signin',
     localStorage.setItem('userData', req.user);
     console.log(localStorage.getItem('userData'));
 
-    if(process.env.NODE_ENV === 'production') {
-      res.redirect('/eventfeed');
-    } else {
-      res.redirect('/eventfeed');
-    }
-    // res.redirect('/eventfeed');
-    // res.send(req.user);
+    res.json(req.user);
+
   }
 );
+
+// router.post('/signin', function(req, res, next) {
+//   passport.authenticate('local', function (err, user, info) {
+//     if (err) { 
+//       return res.send(400);
+//     }
+//     else {
+//       localStorage.setItem('userData', req.user);
+//       console.log(localStorage.getItem('userData'));
+//       res.send(200);
+//     };
+//   })
+// })
 
 router.get('/userdata', function(req, res) {
   var data = localStorage.getItem('userData');
