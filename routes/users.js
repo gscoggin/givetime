@@ -49,6 +49,7 @@ const localStorage = new LocalStorage('./scratch');
 router.post('/signin', 
   passport.authenticate('local', { failureRedirect: '/signin'}),
   function(req, res) {
+  
     localStorage.setItem('userData', req.user);
     console.log(localStorage.getItem('userData'));
 
@@ -60,6 +61,7 @@ router.post('/signin',
     // res.redirect('/eventfeed');
     // res.send(req.user);
   }
+}
 );
 
 router.get('/userdata', function(req, res) {
