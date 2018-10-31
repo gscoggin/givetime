@@ -11,9 +11,9 @@ import CreateProfile from './CreateProfile';
 
 class CharityEvent extends Component {
     state = {
-        eventshow: true,
-        createshow: true,
-        createProfile: true
+        eventshow: false,
+        createshow: false,
+        // createProfile: true
         
     }
 
@@ -22,6 +22,9 @@ class CharityEvent extends Component {
             this.setState({eventshow:false})
         } else {
             this.setState({eventshow:true})
+        }
+        if(this.state.createshow) {
+            this.setState({createshow:false})
         }
         
     
@@ -32,18 +35,21 @@ class CharityEvent extends Component {
       } else {
           this.setState({createshow:true})
       }
+      if(this.state.eventshow) {
+        this.setState({eventshow:false})
+      }
       
   
   }
-  createProfileToggle =() => {
-    if(this.state.createProfile) {
-        this.setState({createProfile:false})
-    } else {
-        this.setState({createProfile:true})
-    }
+//   createProfileToggle =() => {
+//     if(this.state.createProfile) {
+//         this.setState({createProfile:false})
+//     } else {
+//         this.setState({createProfile:true})
+//     }
     
 
-}
+// }
     render () {
         return (
             
@@ -77,12 +83,12 @@ class CharityEvent extends Component {
             
             />
         </div>
-        <div>
+        {/* <div>
          <CreateProfile
             state={this.state.createProfile}
             
             />
-        </div>
+        </div> */}
         
         <Footer /> 
     </div>

@@ -5,7 +5,7 @@ import '../../resources/styles.css';
 
 const Footer = () => {
   return (
-    <footer className="bck_black">
+    <footer className="footer_bck_black">
       <Fade delay={500}>
         <div className="font_righteous footer_logo_venue">
           Give Time
