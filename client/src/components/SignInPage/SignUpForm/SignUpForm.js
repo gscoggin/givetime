@@ -85,7 +85,7 @@ class SignUpForm extends Component {
           name="username"
           onChange={this.handleInputChange}
           type="text"
-          className="charityClass"
+          className="form-control"
           placeholder="Username" 
           id="username" />
         
@@ -96,7 +96,7 @@ class SignUpForm extends Component {
             name="password"
             onChange={this.handleInputChange}
             type="password"
-            className="charityClass"
+            className="form-control"
             placeholder="Password" 
             id="password" />
         
@@ -107,7 +107,7 @@ class SignUpForm extends Component {
           name="firstName"
           onChange={this.handleInputChange}
           type="text"
-          className="charityClass"
+          className="form-control"
           placeholder="First Name" 
           id="firstName" />
       
@@ -118,7 +118,7 @@ class SignUpForm extends Component {
           name="lastName"
           onChange={this.handleInputChange}
           type="text"
-          className="charityClass"
+          className="form-control"
           placeholder="Last Name" 
           id="lastName" />
       
@@ -129,7 +129,7 @@ class SignUpForm extends Component {
           name="email"
           onChange={this.handleInputChange}
           type="text"
-          className="charityClass"
+          className="form-control"
           placeholder="Email" 
           id="email" />
       
@@ -140,7 +140,7 @@ class SignUpForm extends Component {
           name="phoneNumber"
           onChange={this.handleInputChange}
           type="text"
-          className="charityClass"
+          className="form-control"
           placeholder="Phone Number" 
           id="phoneNumber" />
 
