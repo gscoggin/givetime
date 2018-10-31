@@ -9,6 +9,7 @@ import FullScreenHero from './components/FullScreenHero';
 import EventFeedPage from './components/Feed';
 import CharityEvent from './components/SignInPage/CharityEventPage';
 import InterestSelectionHero from './components/SignInPage/SignUpHero/InterestSelectionHero';
+import NoMatch from './components/Nav/NoMatch';
 
 
 const App = () => (
@@ -24,6 +25,7 @@ const App = () => (
       <Route  exact path="/eventfeed" component={EventFeedPage} />
       <Route  exact path="/charityevent" component={CharityEvent} />
       <Route  exact path="/interests" component={InterestSelectionHero} />
+      <Route component={NoMatch} />
 
 
     </Switch>

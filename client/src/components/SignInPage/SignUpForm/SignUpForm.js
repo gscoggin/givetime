@@ -143,12 +143,14 @@ class SignUpForm extends Component {
           className="form-control"
           placeholder="Phone Number" 
           id="phoneNumber" />
+          
+          <div className= "text-center">
+          <button className ="button radius signupBtn" onClick={this.handleFormSubmit}>Next</button>
+        </div>
 
         </div>
         
-        <div className= "text-center">
-          <button className ="button radius signupBtn" onClick={this.handleFormSubmit}>Next</button>
-        </div>
+        
         
       </form>
       
