@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import SignUpHero from './components/SignInPage/SignUpHero/SignUpHero';
 import CharitySignUpHero from './components/SignInPage/CharitySignUpHero/CharitySignUpHero';
-// import CharityMissionHero from './components/SignInPage/CharityMissionHero/CharityMissionHero';
+import CharityMissionHero from './components/SignInPage/CharityMissionHero/CharityMissionHero';
 import SignInHero from './components/SignInPage/SignInHero/SignInHero';
 import FullScreenHero from './components/FullScreenHero';
 import EventFeedPage from './components/Feed';
-// import InterestSelectionHero from './components/SignInPage/SignInHero/InterestSelectionHero';
+import InterestSelectionHero from './components/SignInPage/SignInHero/InterestSelectionHero';
 import CharityEvent from './components/SignInPage/CharityEventPage';
 
 
