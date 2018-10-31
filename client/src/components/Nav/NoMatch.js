@@ -8,10 +8,7 @@ const NoMatch = () => {
       404!
       </h1>
      <MiscSignInButton
-      add={{
-        width: '30px',
-        
-      }}
+    
      >
 
      </MiscSignInButton

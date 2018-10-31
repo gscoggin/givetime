@@ -85,7 +85,7 @@ class SignUpForm extends Component {
           name="username"
           onChange={this.handleInputChange}
           type="text"
-          className="form-control"
+          className="charityClass"
           placeholder="Username" 
           id="username" />
         
@@ -96,7 +96,7 @@ class SignUpForm extends Component {
             name="password"
             onChange={this.handleInputChange}
             type="password"
-            className="form-control"
+            className="charityClass"
             placeholder="Password" 
             id="password" />
         
@@ -107,7 +107,7 @@ class SignUpForm extends Component {
           name="firstName"
           onChange={this.handleInputChange}
           type="text"
-          className="form-control"
+          className="charityClass"
           placeholder="First Name" 
           id="firstName" />
       
@@ -118,7 +118,7 @@ class SignUpForm extends Component {
           name="lastName"
           onChange={this.handleInputChange}
           type="text"
-          className="form-control"
+          className="charityClass"
           placeholder="Last Name" 
           id="lastName" />
       
@@ -129,7 +129,7 @@ class SignUpForm extends Component {
           name="email"
           onChange={this.handleInputChange}
           type="text"
-          className="form-control"
+          className="charityClass"
           placeholder="Email" 
           id="email" />
       
@@ -140,17 +140,15 @@ class SignUpForm extends Component {
           name="phoneNumber"
           onChange={this.handleInputChange}
           type="text"
-          className="form-control"
+          className="charityClass"
           placeholder="Phone Number" 
           id="phoneNumber" />
-          
-          <div className= "text-center">
-          <button className ="button radius signupBtn" onClick={this.handleFormSubmit}>Next</button>
-        </div>
 
         </div>
         
-        
+        <div className= "text-center">
+          <button className ="button radius signupBtn" onClick={this.handleFormSubmit}>Next</button>
+        </div>
         
       </form>
       
