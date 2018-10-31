@@ -61,7 +61,7 @@ class CharitySignUpForm extends Component {
         value={this.state.username}
         name="username"
         type="text"
-        className="form-control"
+        className="charityClass"
         placeholder="Username" 
         id="username" />
       
@@ -70,13 +70,13 @@ class CharitySignUpForm extends Component {
         value={this.state.charityName}
         name="charityName"
         type="text"
-        className="form-control"
+        className="charityClass"
         placeholder="Charity Name" 
         id="charityName" />
       
       <label>Charity Category
         <select 
-          className="form-control"
+          className="charityClass"
           onChange={this.handleInputChange}
           value={this.state.category}
           name="category"
@@ -95,7 +95,7 @@ class CharitySignUpForm extends Component {
         value={this.state.email}
         name="email"
         type="text"
-        className="form-control"
+        className="charityClass"
         placeholder="Email" 
         id="email" />
     
@@ -104,13 +104,13 @@ class CharitySignUpForm extends Component {
         value={this.state.phoneNumber}
         name="phoneNumber"
         type="text"
-        className="form-control"
+        className="charityClass"
         placeholder="Phone Number" 
         id="phoneNumber" />
 
       <label>Are you a 501(c)(3) charity?
         <select required 
-          className="form-control"
+          className="charityClass"
           onChange={this.handleInputChange}
           value={this.state.regulated}
           name="regulated"
@@ -120,12 +120,10 @@ class CharitySignUpForm extends Component {
           <option value="false">No</option>
         </select>
       </label>
-
-      </div>
-
       <label>Mission Statement</label>
       <textarea 
-        className = "form-control"
+        className = "charityClass"
+        rows="4"
         onChange={this.handleInputChange}
         value={this.state.mission}
         name="mission"
@@ -134,6 +132,10 @@ class CharitySignUpForm extends Component {
       <div className= "text-center">
         <button className ="button radius signupBtn" onClick={this.handleFormSubmit}>Next</button>
       </div>
+
+      </div>
+
+      
       
     </form>
       

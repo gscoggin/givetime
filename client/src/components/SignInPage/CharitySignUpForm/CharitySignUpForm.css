@@ -24,11 +24,13 @@ p {
   border: 1px solid #888;
   
   width: 500px;
-  height: 600px;
+  height: 700px;
   
   margin: auto;
 
 }
+
+
 input[type="radio"] {
   margin-left: 120px;
   margin-right: 10px;
