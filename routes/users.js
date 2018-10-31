@@ -54,14 +54,13 @@ router.post('/signin',
     console.log(localStorage.getItem('userData'));
 
     if(process.env.NODE_ENV === 'production') {
-      res.redirect('https://still-atoll-52696.herokuapp.com/eventfeed')
+      res.redirect('https://still-atoll-52696.herokuapp.com/eventfeed');
     } else {
       res.redirect('/eventfeed');
     }
     // res.redirect('/eventfeed');
     // res.send(req.user);
   }
-}
 );
 
 router.get('/userdata', function(req, res) {
