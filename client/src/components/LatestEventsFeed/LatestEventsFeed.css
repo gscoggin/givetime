@@ -1,0 +1,54 @@
+.bottom-content-section-button svg {
+  transform: rotate(180deg);
+  height: 3.75rem;
+  width: 3.75rem;
+  color: black;
+}
+
+
+
+.latestEventBtn {
+
+
+  background-color: #0e4e67;
+
+}
+
+.blk-bttn {
+  float: left;
+  margin:  25px 50px;
+  height: 100px;
+  
+}
+
+
+h5 {
+  font-family: 'Quicksand', sans-serif;
+  
+}
+.footer_logo {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 32px;
+  color:#ffffff;
+
+}
+
+.latest_footer_bck_black {
+  
+ margin: 0px;
+  background: #3c3c3c;
+
+ 
+
+}
+
+.footer_copyright {
+  font-size: 18px;
+}
+
+
+
+
+
+

@@ -9,6 +9,7 @@ import EventFeedPage from './components/Feed';
 import CharityEvent from './components/SignInPage/CharityEventPage';
 import InterestSelectionHero from './components/SignInPage/SignUpHero/InterestSelectionHero';
 import NoMatch from './components/Nav/NoMatch';
+import LatestEventsFeedPage from './components/LatestEventsFeed/LatestEventsFeedPage';
 
 
 class App extends Component {
@@ -38,7 +39,7 @@ class App extends Component {
             <Route exact path="/signin" render={(props) => <SignInHero {...props} onUpdate={this.onUpdate}/>} />
             <Route exact path="/signup" component={SignUpHero} />
             <Route exact path="/charitysignup" component={CharitySignUpHero} />
-            {/* <Route exact path="/charitymissionform" component={CharityMissionHero} /> */}
+            <Route exact path="/latestevents" component={LatestEventsFeedPage} />
             <Route  exact path="/eventfeed" component={EventFeedPage} />
             <Route  exact path="/charityevent" component={CharityEvent} />
             {/* <Route  exact path="/interests" component={InterestSelectionHero} /> */}
