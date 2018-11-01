@@ -1,3 +1,17 @@
+.feedList {
+    list-style-type: none;
+}
+
+h5 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+p.feed {
+    text-align: left;
+
+}
+
 h2 {
     font-family: 'Quicksand', sans-serif;
 }
@@ -33,4 +47,122 @@ h3 {
     padding: 10px 30px 12px 0px;
    
 }
+
+.charityClass {
+    margin: 15px auto;
+    background-color:#fff;
+    
+    z-index: 2;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    
+    text-shadow: 0 0 3px lightgray;
+  }
+  
+  .event_vn_wrapper {
+    width: 100%;
+    display: flex;
+    margin: 15px 300px;
+  }
+  
+  .vn_wrapper {
+    display: flex;
+    padding: 100px 0px;
+  }
+  
+  .vn_item {
+    display: flex;
+    width:50%;
+    color:#ffffff;
+    text-align: center;
+    
+  }
+          .event_vn_item {
+            height: 400px;
+            display: flex;
+            width: 60%;
+            color:#ffffff;
+            text-align: center;
+            overflow-y: scroll;
+            
+          }
+                      
+  .vn_item .vn_outer {
+    
+    width: 300px;
+    border: 2px solid #828282;
+    margin: auto;
+    margin-left: 40px;
+    padding: 5px;
+  }
+            .event_vn_item .event_vn_outer {
+              
+              width: 100%;
+              border: 2px solid #828282;
+              margin: auto;
+              
+              padding: 5px;
+            }
+  
+  .vn_item .vn_inner { 
+    
+    border: 2px solid #828282;
+    position: relative;
+    padding: 0px 20px;
+    transition: all 500ms ease;
+  }
+  .event_vn_item .event_vn_inner { 
+    
+    border: 2px solid #828282;
+    position: relative;
+    padding: 0px 20px;
+    transition: all 500ms ease;
+  }
+  
+  .vn_item .vn_icon_square {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -54px;
+    left: 100px;
+  }
+  
+  .vn_item .vn_icon {
+    width: 40px;
+    height: 40px;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    position: absolute;
+    top: -32px;
+    left: 117px;
+  }
+  
+  .vn_item .vn_title {
+    font-size: 28px;
+    margin: 75px 0px 20px 0px;
+    border-bottom: 1px solid #5d5d5d;
+    padding-bottom: 10px;
+  }
+
+  .event_sm_title {
+    font-size: 18px;
+    margin: 5px 0px 5px 0px;
+   
+   
+    color: white;
+  }
+  
+  .vn_item .vn_desc {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+
+  
+  
+  
 

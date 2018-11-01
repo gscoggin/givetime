@@ -71,7 +71,7 @@ render() {
     onChange={this.handleInputChange}
     value={this.state.password}
     name="password"
-    type="text"
+    type="password"
     className="form-control"
     placeholder="Password" 
     id="password" />
