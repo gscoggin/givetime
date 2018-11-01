@@ -13,8 +13,9 @@
 }
 
 .mobile-app-toggle .button {
-  background: transparent;
+  background: #fefefe;
   color: #2f5753;
+  opacity: .65;
   margin-bottom: 0;
   -webkit-flex: 1 0 0;
       -ms-flex: 1 0 0px;
@@ -33,4 +34,6 @@
 .button:hover {
   background:#2f5753;
   color: #fefefe;
+  zoom: 1.03;
+  opacity: 1
 }
