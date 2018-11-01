@@ -11,17 +11,3 @@
 }
 
 
-.charityClass {
-  margin: 15px auto;
-  background-color:#fff;
-  
-  z-index: 2;
-  display: flex;
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  
-  text-shadow: 0 0 3px lightgray;
-}
-
-
-

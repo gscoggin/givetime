@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import CharityNavSideBar from "./CharityNavSideBar"
 import CharityFeedListItem from "./CharityFeedListItem.js";
-import "./CharityEvent.css";
+import "./CharityEventFeedPage.css";
 import MyEvent from '../../MyEvents/MyEvent';
 import Footer from '../../Nav/Footer';
 import CreateEvent from './CreateEvent';
