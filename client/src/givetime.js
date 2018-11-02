@@ -8,7 +8,7 @@ import FullScreenHero from './components/FullScreenHero';
 import EventFeedPage from './components/Feed';
 import InterestSelectionHero from './components/SignInPage/SignInHero/InterestSelectionHero';
 import CharityEvent from './components/SignInPage/CharityEventPage';
-
+import LatestEventsFeedPage from './components/LatestEventsFeed/LatestEventsFeedPage';
 
 class GiveTime extends Component {
   render() {
@@ -35,9 +35,13 @@ class GiveTime extends Component {
         <Link to="/signup"></Link>
       </SignUpHero>
 
-      <CharitySignUpHero>
-        <Link to="/charitysignup"></Link>
-      </CharitySignUpHero>
+      
+      
+      <LatestEventsFeedPage>
+        <Link to="/latestevents"></Link>
+      </LatestEventsFeedPage>
+    
+      
 
       
       {/* <CharityMissionHero>

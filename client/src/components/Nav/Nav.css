@@ -41,3 +41,16 @@ img {
     background: #650F11;
     text-align: center;
 }
+.wrapper {
+    width: 100%;
+
+
+}
+.four_bottom-content-section-button svg {
+    margin-left: 425px;
+    transform: rotate(180deg);
+    height: 40px;
+    width: 40px;
+    color: white;
+    float: left;
+  }
