@@ -34,7 +34,17 @@ class LatestEventsFeedPage extends Component {
     render () {
         return (
             
-            <div>
+        <div>
+            <div className="top-content-section">
+    <div className="top-bar"
+     style={{backgroundColor: 'white'}}>
+      <div className="top-bar-right">
+        <ul className="menu">
+          <li><Link to = "/signin">Sign in</Link></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
         <div className="blk-bttn">
             <div className="bottom-content-section-button" data-magellan data-threshold="0">
