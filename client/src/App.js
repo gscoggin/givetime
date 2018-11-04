@@ -39,8 +39,8 @@ class App extends Component {
             <Route exact path="/signin" render={(props) => <SignInHero {...props} onUpdate={this.onUpdate}/>} />
             <Route exact path="/signup" component={SignUpHero} />
             <Route exact path="/charitysignup" component={CharitySignUpHero} />
-            <Route exact path="/latestevents" component={LatestEventsFeedPage} />
-            <Route  exact path="/eventfeed" component={EventFeedPage} />
+            <Route exact path="/moreinfo" component={LatestEventsFeedPage} />
+            <Route exact path="/eventfeed" component={EventFeedPage} />
             <Route  exact path="/charityevent" component={CharityEvent} />
             {/* <Route  exact path="/interests" component={InterestSelectionHero} /> */}
             <Route component={NoMatch} />
