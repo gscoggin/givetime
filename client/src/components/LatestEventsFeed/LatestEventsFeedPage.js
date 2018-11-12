@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import { Link } from 'react-router-dom';
-import LatestFeedListItem from "./LatestFeedListItem.js";
+import LatestFeedListItem from "../Feed/FeedListItem.js";
 import "./LatestEventsFeed.css";
-import LatestFeedList from './LatestFeedList';
+import LatestFeedList from '../Feed/FeedList.js';
 import LatestFooter from './LatestFooter';
 import API from "../../utils/API";
 
@@ -11,10 +11,15 @@ import API from "../../utils/API";
 class LatestEventsFeedPage extends Component {
     state = {
         show: false,
-        areaEvents: {}   
+        areaEvents: {},
+        events: []   
     }
 
     componentDidMount() {
+        API.getEvents().then(event =>{
+                this.setState({ events: event.data });
+        });
+
         API.getUserData()
             .then(areaEvents =>{
                 console.log(areaEvents.data);
@@ -57,7 +62,26 @@ class LatestEventsFeedPage extends Component {
         <LatestFeedList />
             <div className= "blank "></div>
             <h2>Latest Events</h2>
-            <LatestFeedListItem />
+            <h2>Event Feed</h2>
+            <LatestFeedList>
+            {this.state.events.map( event => {
+                const eventDate = new Date(event.date);
+                const prettyEventDate = new Intl.DateTimeFormat('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: '2-digit',
+                }).format(eventDate);
+                    return (
+                      <LatestFeedListItem
+                        key={event.name}
+                        name={event.name}
+                        synopsis={event.synopsis}
+                        date={prettyEventDate}
+                      />
+                      
+                    );
+                  })}
+            </LatestFeedList>
         </div>
             
         </div>

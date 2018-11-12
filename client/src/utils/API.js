@@ -1,6 +1,9 @@
 import axios from "axios";
 
 export default {
+    getEvents: function() {
+        return axios.get("/api/eventfeed");
+    },
     newVolunteer: function(volunteerData) {
         return axios.post("/api/signup", volunteerData)
     },
