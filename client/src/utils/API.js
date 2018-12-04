@@ -18,6 +18,10 @@ export default {
 
     getUserData: function() {
         return axios.get("/api/userdata")
+    },
+    
+    newEvent: function(eventData) {
+        return axios.post("/api/event", eventData)
     }
     
 }
