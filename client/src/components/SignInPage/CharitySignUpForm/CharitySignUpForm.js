@@ -13,7 +13,7 @@ class CharitySignUpForm extends Component {
       category: "",
       email: "",
       phoneNumber: "",
-      regulated: false,
+      regulated: "",
       mission: "",
     }
   }
@@ -81,7 +81,7 @@ class CharitySignUpForm extends Component {
           value={this.state.category}
           name="category"
           id="category">
-          <option value="placeholder" disabled selected hidden>Please select an option</option>
+          <option value="placeholder">Please select an option</option>
           <option value="animals">Animals</option>
           <option value="children">Children</option>
           <option value="education">Education</option>
@@ -115,7 +115,7 @@ class CharitySignUpForm extends Component {
           value={this.state.regulated}
           name="regulated"
           id="regulated">
-          <option value="placeholder" hidden>Please select from dropdown</option>
+          <option value="placeholder">Please select an option</option>
           <option value="true">Yes</option>
           <option value="false">No</option>
         </select>
